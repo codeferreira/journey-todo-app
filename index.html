@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="flex h-screen pt-24 bg-slate-700">
+  <main class="max-w-md w-full mx-auto">
+    <form class="flex gap-4" name="todo" id="todo-form">
+      <input class="p-4 rounded-md w-full border-slate-300" type="text" id="task" name="task"
+        placeholder="Add here your task...">
+      <button
+        class="bg-green-500 text-white text-xl rounded-md p-4 flex items-center justify-center transition hover:bg-green-700"
+        type="submit">
+        <i class="ph-plus-bold"></i>
+      </button>
+    </form>
+    <section class="bg-white mt-8 p-4 rounded-md text-xl">
+      <ul id="task-list" class="flex flex-col gap-4">
+        <li id="default-task" class="hidden items-center justify-between ">
+          <div class="flex items-center gap-2">
+            <input id="checked-checkbox" type="checkbox" value=""
+              class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <p>Task here</p>
+          </div>
+          <div class="flex items-center gap-3 text-2xl">
+            <button 
+              id="edit-button"
+              class="flex items-center justify-center text-green-600"
+            >
+              <i class="ph-pencil"></i>
+            </button>
+            <button
+              id="delete-button"
+              class="flex items-center justify-center text-red-600"
+            >
+              <i class="ph-trash"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>
